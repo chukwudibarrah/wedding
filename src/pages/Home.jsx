@@ -1,6 +1,6 @@
-import partner1 from "../images/partner1.jpg";
-import partner2 from "../images/partner2.jpg";
-import wreath from "../images/wreath.png";
+import partner1 from "../../public/partner1.jpg";
+import partner2 from "../../public/partner2.jpg";
+import wreath from "../../public/wreath.png";
 import WeddingGallery from "../components/WeddingGallery";
 import Confirm from "../components/Confirm";
 import Details from "../components/Details";
@@ -38,7 +38,7 @@ export default function Home() {
       {/* whitespace break ends */}
 
         <div id="center-body" className="mx-10 md:m-28 flex flex-col md:flex-row text-center items-center min-h-screen">
-          <div id="bride-section" className="px-6 md:px-16 bg-blue-50 md:h-[800px] ">
+          <div id="bride-section" className="px-6 md:px-16 bg-blue-50 md:h-[800px] rounded-lg">
             <div className="pt-36">
             <img src={partner1} className="rounded-full mb-3" alt="woman" />
             <h3 className="font-windsong text-3xl mb-5">Bride's Name</h3>
@@ -52,7 +52,7 @@ export default function Home() {
 
       {/* floating island starts here */}
 
-          <div id="middle-island" className="px-5 md:px-15 bg-white shadow-[0_5px_5px_3px_rgba(0,0,0,0.3)] md:w-7/12 md:h-[1000px] border-gray-200 border-2">
+          <div id="middle-island" className="z-50 px-5 md:px-15 rounded-lg bg-white shadow-[0_5px_5px_3px_rgba(0,0,0,0.3)] md:w-7/12 md:h-[1000px] border-gray-200 border-2">
             <h3 className="font-windsong text-2xl mb-2 mt-16 md:mt-28">How we met</h3>
             <p className="font-windsong text-lg text-orange-400 my-1">
               16 September 2022
@@ -143,7 +143,7 @@ export default function Home() {
 
       {/* the groom starts here */}
 
-          <div id="groom-section" className="px-6 md:px-16 bg-blue-50 md:h-[800px] ">
+          <div id="groom-section" className="px-6 md:px-16 bg-blue-50 md:h-[800px] rounded-lg">
             <div className="pt-36">
             <img src={partner2} className="rounded-full mb-3" alt="woman" />
             <h3 className="font-windsong text-3xl mb-5">Groom's Name</h3>
@@ -163,7 +163,7 @@ export default function Home() {
       {/* date and location */}
 
           <section>
-        <div id="gallery" className="">
+        <div id="map" className="w-screen min-h-screen">
         <div className="text-center flex flex-col items-center justify-center mt-36 mb-20">
           <img src={wreath} alt="wreath" className="w-24 mb-5" />
           <h2 className="font-merriweather text-3xl uppercase font-light tracking-widest">
@@ -179,7 +179,7 @@ export default function Home() {
       {/* image gallery section here */}
 
       <section>
-        <div id="gallery" className="">
+        <div id="gallery" className="min-h-screen px-5">
         <div className="text-center flex flex-col items-center justify-center mt-36 mb-20">
           <img src={wreath} alt="wreath" className="w-24 mb-5" />
           <h2 className="font-merriweather text-3xl uppercase font-light tracking-widest">
@@ -194,13 +194,15 @@ export default function Home() {
       {/* rsvp form section here */}
 
       <section>
-        <div id="gallery" className="">
+        <div id="rsvp" className="">
         <div className="text-center flex flex-col items-center justify-center mt-36 mb-20">
           <img src={wreath} alt="wreath" className="w-24 mb-5" />
           <h2 className="font-merriweather text-3xl uppercase font-light tracking-widest">
             See you there?
           </h2>
         </div>
+        </div>
+        <div className="bg-slate-100 grid content-center min-h-screen p-5">
         <Confirm />
         </div>
       </section>
