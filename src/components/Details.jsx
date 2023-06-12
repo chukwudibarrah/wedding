@@ -1,18 +1,18 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { Map, Marker } from "pigeon-maps"
+import { osm } from 'pigeon-maps/providers'
 
 
 export default function Details() {
   return (
-<MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
-  <TileLayer
-    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-  />
-  {/* <Marker position={[51.505, -0.09]}>
-    <Popup>
-      A pretty CSS3 popup. <br /> Easily customizable.
-    </Popup>
-  </Marker> */}
-</MapContainer>
+    <Map
+    provider={osm}
+    height={900}
+    defaultCenter={[51.505, -0.09]}
+    defaultZoom={19}
+    mouseEvents={false}
+  >
+    <Marker width={50} anchor={[51.505, -0.09]} />
+  </Map>
   );
 }
