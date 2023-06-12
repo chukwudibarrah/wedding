@@ -7,3 +7,4 @@ Create a lightweight React app to help track attendees to a wedding. App shoud b
 ![Desktop screenshot](./src//assets//desktop.png)
 ![Mobile screenshot](./src//assets//mobile.png)
 
+Final site will be at: https://chukwudibarrah.github.io/wedding/
