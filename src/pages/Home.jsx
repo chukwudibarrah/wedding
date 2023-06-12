@@ -1,9 +1,10 @@
-import partner1 from "../../public/partner1.jpg";
-import partner2 from "../../public/partner2.jpg";
-import wreath from "../../public/wreath.png";
+import partner1 from "../images/partner1.jpg";
+import partner2 from "../images/partner2.jpg";
+import wreath from "../images/wreath.png";
 import WeddingGallery from "../components/WeddingGallery";
 import Confirm from "../components/Confirm";
 import Details from "../components/Details";
+import Rsvp from "../components/Rsvp";
 
 export default function Home() {
   return (
@@ -204,6 +205,7 @@ export default function Home() {
         </div>
         <div className="bg-slate-100 grid content-center min-h-screen p-5">
         <Confirm />
+        {/* <Rsvp /> */}
         </div>
       </section>
     </main>
