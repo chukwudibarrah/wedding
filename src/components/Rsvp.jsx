@@ -31,7 +31,7 @@ export default function Rsvp() {
 
   return (
     <section>
-      <div className="bg-brown pt-14">
+      <div className="bg-brown pt-48">
         <div className="text-center flex flex-col items-center justify-center mb-32">
           <h2 className="font-merriweather text-3xl uppercase font-light tracking-widest">
             See you there?

@@ -4,11 +4,43 @@ import { osm } from "pigeon-maps/providers";
 export default function Details() {
   return (
     <section>
-      <div id="map" className="w-screen min-h-screen py-20">
+      <div id="map" className="w-screen min-h-screen">
         <div className="text-center flex flex-col items-center justify-center">
-          <h2 className="font-merriweather text-3xl uppercase font-light tracking-widest">
+          <h2 className="font-merriweather text-3xl uppercase font-light tracking-widest mt-40">
             When & where
           </h2>
+        </div>
+        <div className="grid md:grid-flow-col items-center my-16">
+          <div className="lg:px-28 px-7">
+            <h3 className="font-windsong text-3xl my-10">Ceremony</h3>
+            <p className="font-merriweather text-sm leading-6 font-thin md:mb-0 text-slate-500">
+              12 July 2018
+            </p>
+            <p className="font-merriweather text-sm leading-6 font-thin md:mb-0 text-slate-500">
+              Venue: The venue Name
+            </p>
+            <p className="font-merriweather text-sm leading-6 font-thin md:mb-0 text-slate-500">
+            Address: Venue address
+            </p>
+            <p className="font-merriweather text-sm leading-6 font-thin md:mb-0 text-slate-500">
+            Time: 11.00 am
+            </p>
+          </div>
+          <div className="lg:px-28 px-7">
+            <h3 className="font-windsong text-3xl my-10">Reception</h3>
+            <p className="font-merriweather text-sm leading-6 font-thin md:mb-0 text-slate-500">
+              12 July 2018
+            </p>
+            <p className="font-merriweather text-sm leading-6 font-thin md:mb-0 text-slate-500">
+              Venue: The venue Name
+            </p>
+            <p className="font-merriweather text-sm leading-6 font-thin md:mb-0 text-slate-500">
+            Address: Venue address
+            </p>
+            <p className="font-merriweather text-sm leading-6 font-thin md:mb-0 text-slate-500">
+            Time: 3.00 pm
+            </p>
+          </div>
         </div>
         <Map
           provider={osm}
@@ -19,30 +51,7 @@ export default function Details() {
         >
           <Marker width={50} anchor={[51.505, -0.09]} />
         </Map>
-        <div className="grid md:grid-flow-col items-center justify-items-center">
-          <div className="lg:px-10 px-7">
-            <h3 className="font-windsong text-3xl md:mt-10">Ceremony</h3>
-            <p className="font-merriweather text-sm leading-6 font-thin mb-14 md:mb-0 text-slate-500 my-3">
-              12 July 2018
-            </p>
-            <p className="font-merriweather text-sm leading-6 font-thin mb-14 md:mb-0 text-slate-500 my-3">
-              Duis autem vel eum iriure dolor in vulputate velit esse molestie
-              consequat, vel illum olore eu feugiat nulla facilisis at vero
-              iusto
-            </p>
-          </div>
-          <div className="lg:px-10 px-7">
-            <h3 className="font-windsong text-3xl md:mt-10">Reception</h3>
-            <p className="font-merriweather text-sm leading-6 font-thin mb-14 md:mb-0 text-slate-500 my-3">
-              12 July 2018
-            </p>
-            <p className="font-merriweather text-sm leading-6 font-thin mb-14 md:mb-0 text-slate-500 my-3">
-              Duis autem vel eum iriure dolor in vulputate velit esse molestie
-              consequat, vel illum olore eu feugiat nulla facilisis at vero
-              iusto
-            </p>
-          </div>
-        </div>
+        
       </div>
     </section>
   );
