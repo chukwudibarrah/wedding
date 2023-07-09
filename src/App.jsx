@@ -4,6 +4,7 @@ import BandG from "./components/BandG";
 import Details from "./components/Details";
 import WeddingGallery from "./components/WeddingGallery";
 import Rsvp from "./components/Rsvp";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
     <Details />
     <Rsvp />
     <WeddingGallery />
+    <Footer />
     </div>
   )
 }

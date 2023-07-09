@@ -1,5 +1,4 @@
 import PhotoAlbum from "react-photo-album";
-import wreath from "../../images/wreath.png";
 
 const photos = [
   {
@@ -40,9 +39,8 @@ export default function WeddingGallery() {
     <section>
       <div id="gallery" className="min-h-screen px-5">
         <div className="text-center flex flex-col items-center justify-center mt-36 mb-20">
-          <img src={wreath} alt="wreath" className="w-24 mb-5" />
           <h2 className="font-merriweather text-3xl uppercase font-light tracking-widest">
-            Our wedding gallery
+            Selected photos
           </h2>
         </div>
         <PhotoAlbum layout="rows" photos={photos} />

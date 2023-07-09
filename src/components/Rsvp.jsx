@@ -1,6 +1,6 @@
 import { useState } from "react";
 import couple from "../../images/africancouple.png";
-import flowers from "../../images/flowers.png";
+import { motion } from "framer-motion";
 
 export default function Rsvp() {
   const [name, setName] = useState("");
@@ -58,7 +58,6 @@ export default function Rsvp() {
             <div className="my-7 md:mx-0 mx-10 group transition-all duration-300 ease-in-out">
               <select
                 type="text"
-                value="attendance"
                 className="bg-inherit w-full outline-none bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:100%_4px] bg-no-repeat group-hover:bg-[length:0%_4px] transition-all duration-500 ease-out"
                 onChange={handleAttendanceChange}
               >
@@ -82,9 +81,14 @@ export default function Rsvp() {
                 placeholder="Additional information"
               ></textarea>
             </div>
-            <button type="submit" className="my-10 md:mx-0 mx-10 uppercase border-8 border-dotted hover:font-extrabold hover:border-double border-gold rounded-full px-6 py-11">
+            <motion.button
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            type="submit" 
+            className="my-10 md:mx-0 mx-10 uppercase border-8 border-dotted hover:font-extrabold hover:border-double border-gold rounded-full px-6 py-11">
               Submit
-            </button>
+            </motion.button>
           </form>
           <img src={couple} className="w-[35rem] " />
         </div>
