@@ -1,78 +1,94 @@
-import React, { useState } from 'react';
-// import firebase from 'firebase/app';
-// import 'firebase/functions';
-
-// Initialize Firebase with your project credentials
-// firebase.initializeApp({
-//   apiKey: 'YOUR_API_KEY',
-//   authDomain: 'YOUR_AUTH_DOMAIN',
-//   projectId: 'YOUR_PROJECT_ID',
-// });
-
-
+import { useState } from "react";
+import couple from "../../images/africancouple.png";
+import flowers from "../../images/flowers.png";
 
 export default function Rsvp() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [attendance, setAttendance] = useState('');
-  
-    const handleNameChange = (e) => {
-      setName(e.target.value);
-    };
-  
-    const handleEmailChange = (e) => {
-      setEmail(e.target.value);
-    };
-  
-    const handleAttendanceChange = (e) => {
-      setAttendance(e.target.value);
-    };
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-    }
-      // const sendRSVP = firebase.functions().httpsCallable('sendRSVP');
-  
-      // Create an object with the form data
-      const formData = {
-        name,
-        email,
-        attendance,
-      };
-  
-      // Call the Firebase Cloud Function to send the email
-    //   sendRSVP(formData)
-    //     .then((result) => {
-    //       console.log(result); // You can handle the response from the Firebase Cloud Function here
-    //     })
-    //     .catch((error) => {
-    //       console.error('Error:', error);
-    //     });
-    // };
-  
-    return (
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value="name" onChange={handleNameChange} />
-        </label>
-        <br />
-        <label>
-          Email:
-          <input type="email" value="email" onChange={handleEmailChange} />
-        </label>
-        <br />
-        <label>
-          Attendance:
-          <select value="attendance" onChange={handleAttendanceChange}>
-            <option value="">-- Select an option --</option>
-            <option value="attending">Attending</option>
-            <option value="not_attending">Not Attending</option>
-          </select>
-        </label>
-        <br />
-        <button type="submit">Submit</button>
-      </form>
-    );
-  
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [attendance, setAttendance] = useState("");
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleAttendanceChange = (e) => {
+    setAttendance(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const formData = {
+    name,
+    email,
+    attendance,
+  };
+
+  return (
+    <section>
+      <div className="bg-brown pt-14">
+        <div className="text-center flex flex-col items-center justify-center mb-32">
+          <h2 className="font-merriweather text-3xl uppercase font-light tracking-widest">
+            See you there?
+          </h2>
+        </div>
+        <div className="grid md:grid-flow-col justify-evenly items-center">
+          <form onSubmit={handleSubmit}>
+            <div className="my-7 md:mx-0 mx-10 group transition-all duration-300 ease-in-out">
+              <input
+                type="text"
+                placeholder="Name"
+                className="bg-inherit w-full outline-none bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:100%_4px] bg-no-repeat group-hover:bg-[length:0%_4px] transition-all duration-500 ease-out"
+                onChange={handleNameChange}
+              />
+            </div>
+            <div className="my-7 md:mx-0 mx-10 group transition-all duration-300 ease-in-out">
+              <input
+                type="email"
+                placeholder="Email"
+                className="bg-inherit w-full outline-none bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:100%_4px] bg-no-repeat group-hover:bg-[length:0%_4px] transition-all duration-500 ease-out"
+                onChange={handleEmailChange}
+              />
+            </div>
+            <div className="my-7 md:mx-0 mx-10 group transition-all duration-300 ease-in-out">
+              <select
+                type="text"
+                value="attendance"
+                className="bg-inherit w-full outline-none bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:100%_4px] bg-no-repeat group-hover:bg-[length:0%_4px] transition-all duration-500 ease-out"
+                onChange={handleAttendanceChange}
+              >
+                <option value="">Will you be attending? </option>
+                <option value="attending">Attending</option>
+                <option value="not_attending">Not Attending</option>
+              </select>
+            </div>
+            <div className="my-7 md:mx-0 mx-10 group transition-all duration-300 ease-in-out">
+              <input
+                type="number"
+                placeholder="Number of attendees"
+                className="bg-inherit w-full outline-none bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:100%_4px] bg-no-repeat group-hover:bg-[length:0%_4px] transition-all duration-500 ease-out"
+                onChange={handleNameChange}
+              />
+            </div>
+            <div className="my-7 md:mx-0 mx-10 group transition-all duration-300 ease-in-out">
+              <textarea
+                type="text"
+                className="bg-inherit w-full outline-none bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:100%_4px] bg-no-repeat group-hover:bg-[length:0%_4px] transition-all duration-500 ease-out"
+                placeholder="Additional information"
+              ></textarea>
+            </div>
+            <button type="submit" className="my-10 md:mx-0 mx-10 uppercase border-8 border-dotted hover:font-extrabold hover:border-double border-gold rounded-full px-6 py-11">
+              Submit
+            </button>
+          </form>
+          <img src={couple} className="w-[35rem] " />
+        </div>
+      </div>
+    </section>
+  );
 }
