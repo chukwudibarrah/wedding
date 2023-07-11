@@ -30,7 +30,8 @@
     "react-image-gallery": "^1.2.11",
     "react-leaflet": "^4.2.1",
     "react-map-gl": "^7.0.25",
-    "react-photo-album": "^2.2.2"
+    "react-photo-album": "^2.2.2",
+    "react-visibility-sensor": "^5.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",

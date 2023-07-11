@@ -1,6 +1,6 @@
 import africancoupleclipped from "../../images/africancoupleclipped.png";
 
-export default function BandG() {
+export default function BrideandGroom() {
   return (
     <section>
       <div className="py-20">
