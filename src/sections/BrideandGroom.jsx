@@ -3,7 +3,7 @@ import africancoupleclipped from "../../images/africancoupleclipped.png";
 export default function BrideandGroom() {
   return (
     <section>
-      <div className="py-20">
+      <div className="py-20 bg-gray-300">
         <div className="text-center flex flex-col items-center justify-center mt-40 mb-20">
         <h2 className="font-merriweather text-3xl uppercase font-light tracking-widest">
             Meet the bride & groom
@@ -26,7 +26,7 @@ export default function BrideandGroom() {
               iusto
             </p>
             </div>
-            <div className="bg-[url('../images/flowers.png')]">
+            <div className="">
             <img src={africancoupleclipped} alt="African couple" className="rounded-full" />
             </div>
           </div>
