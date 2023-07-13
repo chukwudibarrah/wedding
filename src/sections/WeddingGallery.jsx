@@ -40,7 +40,7 @@ export default function WeddingGallery() {
     <section>
       <div id="gallery" className="min-h-screen px-5 mt-48">
         <div className="text-center flex flex-col items-center justify-center mb-20">
-          <h2 className="font-merriweather text-3xl uppercase font-light tracking-widest">
+          <h2 className="font-openSans text-3xl uppercase font-light tracking-tight text-gold">
             Selected photos
           </h2>
         </div>

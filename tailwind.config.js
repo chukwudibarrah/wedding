@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        windsong: ['WindSong', 'cursive'],
-        merriweather: ['Merriweather', 'serif'],
+        windsong: ['Windsong', 'cursive'],
+        openSans: ['Open Sans', 'sans-serif'],
       },
       colors: {
         "offWhite": "#F4F1DE",

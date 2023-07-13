@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import Section from "../components/Section";
 
 export default function Landing() {
   return (
@@ -9,20 +9,21 @@ export default function Landing() {
     >
       <motion.div className="max-w-screen text-center">
         <motion.h1
-          animate={{ x: 0 }}
-          initial={{ x: "100%" }}
+          animate={{ y: 0 }}
+          initial={{ y: "100%" }}
           transition={{ delay: 0.65, duration: 0.65 }}
           className="text-6xl md:text-9xl md:px-60 text-slate-200 font-bold font-windsong leading-[65px]"
         >
           Bride & Groom
         </motion.h1>
         <motion.p
-          animate={{ x: 0 }}
-          initial={{ x: "100%" }}
+          animate={{ y: -0 }}
+          initial={{ y: "100%" }}
           transition={{ delay: 0.75, duration: 0.75 }}
-          className="font-merriweather text-slate-300 md:text-xl mt-10"
-        >
+          className="font-openSans text-slate-300 md:text-xl mt-10"
+        ><Section>
           07 August 2023
+          </Section>
         </motion.p>
       </motion.div>
     </section>

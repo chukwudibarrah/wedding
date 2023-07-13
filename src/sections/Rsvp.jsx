@@ -2,8 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import couple from "../../images/africancouple.png";
 import { motion } from "framer-motion";
-import Toast from "../components/Toast";
-import { ToastContainer, toast } from 'react-toastify';
+import Section from "../components/Section";
 import Modal from "../components/Modal";
 
 export default function Rsvp() {
@@ -57,13 +56,14 @@ export default function Rsvp() {
     <section>
       <div className="bg-brown pt-48">
         <div className="text-center flex flex-col items-center justify-center mb-32">
-          <h2 className="font-merriweather text-3xl uppercase font-light tracking-widest">
+          <h2 className="font-openSans text-3xl uppercase font-light tracking-tight text-gold">
             See you there?
           </h2>
         </div>
         <Modal isOpen={modalOpen} onClose={closeModal} />
-        <div className="grid md:grid-flow-col justify-evenly items-center">
-          <form onSubmit={handleSubmit}>
+        <div className="w-screen flex flex-col lg:flex-row">
+          <div className="grid md:grid-flow-col items-center lg:w-[50%]">
+          <form className="lg:px-28" onSubmit={handleSubmit}>
             <div className="my-7 md:mx-0 mx-10 group transition-all duration-300 ease-in-out">
               <input
                 required
@@ -71,7 +71,7 @@ export default function Rsvp() {
                 type="text"
                 value={formData.name}
                 placeholder="Name"
-                className="bg-inherit w-full outline-none bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:100%_4px] bg-no-repeat group-hover:bg-[length:0%_4px] transition-all duration-500 ease-out"
+                className="py-3 placeholder:text-center placeholder:text-slate-500 bg-inherit w-full outline-none bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:100%_4px] bg-no-repeat group-hover:bg-[length:0%_4px] transition-all duration-500 ease-out"
                 onChange={handleChange}
               />
             </div>
@@ -82,7 +82,7 @@ export default function Rsvp() {
                 type="email"
                 value={formData.email}
                 placeholder="Email"
-                className="bg-inherit w-full outline-none bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:100%_4px] bg-no-repeat group-hover:bg-[length:0%_4px] transition-all duration-500 ease-out"
+                className="py-3 placeholder:text-center placeholder:text-slate-500 bg-inherit w-full outline-none bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:100%_4px] bg-no-repeat group-hover:bg-[length:0%_4px] transition-all duration-500 ease-out"
                 onChange={handleChange}
               />
             </div>
@@ -92,7 +92,7 @@ export default function Rsvp() {
                 id="attendance"
                 type="text"
                 value={formData.attendance}
-                className="bg-inherit w-full outline-none"
+                className="py-3 placeholder:text-center placeholder:text-slate-500 text-center text-slate-500 bg-inherit w-full outline-none"
                 onChange={handleChange}
               >
                 <option value="">Will you be attending? </option>
@@ -107,7 +107,7 @@ export default function Rsvp() {
                 type="number"
                 value={formData.guests}
                 placeholder="Number of guests"
-                className="bg-inherit w-full outline-none bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:100%_4px] bg-no-repeat group-hover:bg-[length:0%_4px] transition-all duration-500 ease-out"
+                className="py-3 placeholder:text-center placeholder:text-slate-500 bg-inherit w-full outline-none bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:100%_4px] bg-no-repeat group-hover:bg-[length:0%_4px] transition-all duration-500 ease-out"
                 onChange={handleChange}
               />
             </div>
@@ -117,22 +117,27 @@ export default function Rsvp() {
                 type="text"
                 value={formData.message}
                 onChange={handleChange}
-                className="bg-inherit w-full outline-none bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:100%_4px] bg-no-repeat group-hover:bg-[length:0%_4px] transition-all duration-500 ease-out"
+                className="py-3 placeholder:text-center placeholder:text-slate-500 bg-inherit w-full outline-none bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:100%_4px] bg-no-repeat group-hover:bg-[length:0%_4px] transition-all duration-500 ease-out"
                 placeholder="Additional information"
               ></textarea>
             </div>
+            <div className="flex justify-center">
             <motion.button
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
               type="submit"
               disabled={buttonLoading && true}
-              className="my-10 md:mx-0 mx-10 text-sm uppercase border-8 border-dotted hover:font-extrabold hover:border-double border-gold rounded-full lg:px-[15%] lg:py-[24%] px-[8%] py-[12%] "
+              className="text-slate-500 my-10 md:mx-0 mx-10 text-sm uppercase border-8 border-dotted hover:font-extrabold hover:border-double border-gold rounded-full lg:px-[15%] lg:py-[19%] px-[8%] py-[12%] "
             >
               {buttonLoading ? "Submitting..." : "Submit"}
             </motion.button>
+            </div>
           </form>
+          </div>
+          <div>
           <img src={couple} className="w-[35rem] " />
+          </div>
         </div>
       </div>
     </section>
