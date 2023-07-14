@@ -30,7 +30,7 @@ Create a lightweight React app to help track attendees to a wedding. App shoud b
 Vite - to create the lightweight React base
 React JS library
 Tailwindcss - styling and mobile-first design
-Firebase - handle/store the database of the RSVP form responses
+Nodemailer - manage the backend of the RSVP form responses
 Framer Motion
 
 ### Continued development
