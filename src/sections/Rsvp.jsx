@@ -67,9 +67,9 @@ export default function Rsvp() {
         <SuccessModal isOpen={successModalOpen} onClose={closeModal} />
         <ErrorModal isOpen={errorModalOpen} onClose={closeModal} />
         <div className="w-screen flex flex-col lg:flex-row">
-          <div className="grid md:grid-flow-col items-center lg:w-[50%]">
+          <div className="grid md:grid-flow-col items-center md:w-[50%]">
             <Section>
-          <form className="lg:px-28" onSubmit={handleSubmit}>
+          <form className="md:px-28" onSubmit={handleSubmit}>
             <div className="my-7 md:mx-0 mx-10 group transition-all duration-300 ease-in-out">
               <input
                 required

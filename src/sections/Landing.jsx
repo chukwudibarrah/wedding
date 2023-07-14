@@ -17,15 +17,16 @@ export default function Landing() {
         >
           Bride & Groom
         </motion.h1>
+        <Section>
         <motion.p
           animate={{ y: -0 }}
           initial={{ y: "100%" }}
           transition={{ delay: 0.75, duration: 0.75 }}
           className="font-openSans text-slate-300 md:text-xl mt-10 mb-36"
-        ><Section>
+        >
           07 August 2023
-          </Section>
         </motion.p>
+        </Section>
         <Arrow />
       </motion.div>
     </section>
