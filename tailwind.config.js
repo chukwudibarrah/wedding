@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        hands: "url('/wedding/images/hands.jpg')",
+        hands: "url('/images/hands.jpg')",
       },
       fontFamily: {
         windsong: ["Windsong", "cursive"],

@@ -1,8 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import VisibilitySensor from "react-visibility-sensor";
-import imagesData from "../assets/images.json";
 import ImageModal from "../components/ImageModal";
 import ImageCard from "../components/ImageCard";
+import gallery1 from "../../gallery/gallery1.jpg";
+import gallery3 from "../../gallery/gallery3.jpg";
+import gallery4 from "../../gallery/gallery4.jpg";
+import gallery6 from "../../gallery/gallery6.jpg";
+import gallery7 from "../../gallery/gallery7.jpg";
+import gallery8 from "../../gallery/gallery8.jpg";
+
+const imagesData = [
+  gallery1, gallery3, gallery4, gallery6, gallery7, gallery8
+]
 
 export default function WeddingGallery() {
   const nodeRef = useRef(null);
