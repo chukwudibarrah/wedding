@@ -6,7 +6,7 @@ export default function Landing() {
   return (
     <section
       id="home"
-      className="bg-[url('../../images/hands.jpg')] bg-cover bg-center bg-no-repeat bg-gray-400 bg-blend-multiply h-screen grid items-center"
+      className="bg-hands bg-cover bg-center bg-no-repeat bg-gray-400 bg-blend-multiply h-screen grid items-center"
     >
       <motion.div className="max-w-screen text-center grid justify-items-center">
         <motion.h1
