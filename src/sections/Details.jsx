@@ -4,7 +4,7 @@ import Section from "../components/Section";
 
 export default function Details() {
   return (
-    <section>
+    <section id="whenandwhere">
       <div id="map" className="w-screen min-h-screen">
         <div className="text-center flex flex-col items-center justify-center">
           <h2 className="font-openSans text-3xl uppercase font-light tracking-tight text-gold mt-40">

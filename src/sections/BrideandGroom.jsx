@@ -3,7 +3,7 @@ import Section from "../components/Section";
 
 export default function BrideandGroom() {
   return (
-    <section>
+    <section id="brideandgroom">
       <div className="py-20 bg-gray-300">
         <div className="text-center flex flex-col items-center justify-center mt-40 mb-20">
         <h2 className="font-openSans text-3xl uppercase font-light tracking-tight text-gold">

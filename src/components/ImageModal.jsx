@@ -30,8 +30,24 @@ export default function ImageModal({ imageUrl, onClose, onKeyDown }) {
       tabIndex={-1}
     >
       <div className="relative image-modal-content">
-        <button className="absolute top-4 right-4 text-white" onClick={onClose}>
-          Close
+        <button
+          className="absolute bottom-[10%] right-[50%] text-white"
+          onClick={onClose}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 lg:w-12 lg:h-12 stroke-[3px] transition duration-300 transform hover:scale-105 hover:text-gold"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
         </button>
         <img src={imageUrl} alt="" className="max-h-full max-w-full" />
       </div>

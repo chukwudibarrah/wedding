@@ -8,7 +8,7 @@ export default function ImageCard({ nodeRef, imageUrl, show, onClick }) {
       }`}
       onClick={onClick}
     >
-      <div className="absolute inset-0 z-10 flex transition duration-300 ease-in-out"></div>
+      <div className="absolute inset-0 z-10 flex transition duration-300 ease-in-out hover:cursor-pointer"></div>
       <img src={imageUrl} alt="" />
     </div>
   );

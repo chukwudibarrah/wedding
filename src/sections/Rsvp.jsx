@@ -3,10 +3,12 @@ import axios from "axios";
 import couple from "../../images/africancouple.png";
 import { motion } from "framer-motion";
 import Section from "../components/Section";
-import Modal from "../components/Modal";
+import SuccessModal from "../components/SuccessModal";
+import ErrorModal from "../components/ErrorModal";
 
 export default function Rsvp() {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [successModalOpen, setSuccessModalOpen] = useState(false);
+  const [errorModalOpen, setErrorModalOpen] = useState(false);
   const [buttonLoading, setButtonLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -17,11 +19,13 @@ export default function Rsvp() {
   });
 
   const openModal = () => {
-    setModalOpen(true);
+    setSuccessModalOpen(true);
+    setErrorModalOpen(true);
   };
 
   const closeModal = () => {
-    setModalOpen(false);
+    setSuccessModalOpen(false);
+    setErrorModalOpen(false);
   };
 
   const handleSubmit = async (e) => {
@@ -29,7 +33,7 @@ export default function Rsvp() {
     setButtonLoading(true);
     try {
       await axios.post("http://localhost:3001/api/sendmail", formData);
-      setModalOpen(true)
+      setSuccessModalOpen(true)
       setButtonLoading(false);
       setFormData({
         name: "",
@@ -40,7 +44,7 @@ export default function Rsvp() {
       });
     } catch (error) {
       console.error("Error submitting RSVP:", error);
-      toast("Error submitting RSVP. Please try again.");
+      setErrorModalOpen(true);
     }
   };
 
@@ -53,16 +57,18 @@ export default function Rsvp() {
   };
 
   return (
-    <section>
+    <section id="rsvp">
       <div className="bg-brown pt-48">
         <div className="text-center flex flex-col items-center justify-center mb-32">
           <h2 className="font-openSans text-3xl uppercase font-light tracking-tight text-gold">
             See you there?
           </h2>
         </div>
-        <Modal isOpen={modalOpen} onClose={closeModal} />
+        <SuccessModal isOpen={successModalOpen} onClose={closeModal} />
+        <ErrorModal isOpen={errorModalOpen} onClose={closeModal} />
         <div className="w-screen flex flex-col lg:flex-row">
           <div className="grid md:grid-flow-col items-center lg:w-[50%]">
+            <Section>
           <form className="lg:px-28" onSubmit={handleSubmit}>
             <div className="my-7 md:mx-0 mx-10 group transition-all duration-300 ease-in-out">
               <input
@@ -134,8 +140,9 @@ export default function Rsvp() {
             </motion.button>
             </div>
           </form>
+          </Section>
           </div>
-          <div>
+          <div className="grid items-end">
           <img src={couple} className="w-[35rem] " />
           </div>
         </div>

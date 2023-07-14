@@ -1,6 +1,5 @@
-import { useState } from "react";
 
-export default function Modal({ isOpen, onClose }) {
+export default function SuccessModal({ isOpen, onClose }) {
 
   return (
     <div
