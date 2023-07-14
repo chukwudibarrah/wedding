@@ -53,7 +53,7 @@ export default function WeddingGallery() {
             Selected photos
           </h2>
         </div>
-        <div className="grid lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {imagesShownArray.length > 0 &&
             imagesShownArray.map((show, index) => (
               <VisibilitySensor

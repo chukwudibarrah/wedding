@@ -58,7 +58,7 @@ export default function Rsvp() {
 
   return (
     <section id="rsvp">
-      <div className="bg-brown pt-48">
+      <div className="bg-brown pt-48 w-screen">
         <div className="text-center flex flex-col items-center justify-center mb-32">
           <h2 className="font-openSans text-3xl uppercase font-light tracking-tight text-gold">
             See you there?
@@ -66,8 +66,8 @@ export default function Rsvp() {
         </div>
         <SuccessModal isOpen={successModalOpen} onClose={closeModal} />
         <ErrorModal isOpen={errorModalOpen} onClose={closeModal} />
-        <div className="w-screen flex flex-col lg:flex-row">
-          <div className="grid md:grid-flow-col items-center md:w-[50%]">
+        <div className="w-screen flex flex-col md:flex-row">
+          <div className="grid md:grid-flow-col items-center md:w-full">
             <Section>
           <form className="md:px-28" onSubmit={handleSubmit}>
             <div className="my-7 md:mx-0 mx-10 group transition-all duration-300 ease-in-out">
@@ -142,8 +142,8 @@ export default function Rsvp() {
           </form>
           </Section>
           </div>
-          <div className="grid items-end">
-          <img src={couple} className="w-[35rem] " />
+          <div className="grid w-full items-end justify-items-end">
+          <img src={couple} className="" />
           </div>
         </div>
       </div>
