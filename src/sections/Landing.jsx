@@ -13,7 +13,7 @@ export default function Landing() {
           animate={{ y: 0 }}
           initial={{ y: "100%" }}
           transition={{ delay: 0.65, duration: 0.65 }}
-          className="text-6xl md:text-9xl mt-32 md:px-60 text-slate-200 font-bold font-windsong leading-[65px]"
+          className="text-6xl md:text-9xl mt-44 md:px-60 text-slate-200 font-bold font-windsong leading-[65px]"
         >
           Bride & Groom
         </motion.h1>
@@ -22,7 +22,7 @@ export default function Landing() {
           animate={{ y: -0 }}
           initial={{ y: "100%" }}
           transition={{ delay: 0.75, duration: 0.75 }}
-          className="font-openSans text-slate-300 md:text-xl mt-10 mb-36"
+          className="font-openSans text-slate-300 md:text-xl mt-10 mb-28"
         >
           07 August 2023
         </motion.p>

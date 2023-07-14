@@ -3,11 +3,11 @@ import logo from "../../images/florallogo.png"
 
 export default function Nav() {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const [navSize, setnavSize] = useState("10rem");
+  const [navSize, setnavSize] = useState("8rem");
   const [navColor, setnavColor] = useState("transparent");
   const listenScrollEvent = () => {
     window.scrollY > 10 ? setnavColor("#3D405B") : setnavColor("transparent");
-    window.scrollY > 10 ? setnavSize("10rem") : setnavSize("15rem");
+    window.scrollY > 10 ? setnavSize("6rem") : setnavSize("8rem");
   };
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
@@ -34,7 +34,7 @@ export default function Nav() {
               <img
               src={logo} 
               alt="wreath"
-              className="w-32 h-32 transition duration-300 transform hover:scale-105" />
+              className="w-16 h-16 transition duration-300 transform hover:scale-105" />
             </a>
             <button
               className="text-gold cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -47,7 +47,7 @@ export default function Nav() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-12 h-12"
+                className="w-10 h-10"
               >
                 <path
                   strokeLinecap="round"
@@ -68,7 +68,7 @@ export default function Nav() {
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="nav-item">
                 <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gold hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-xs uppercase font-light leading-snug text-gold hover:opacity-75 font-openSans"
                   href="#brideandgroom"
                 >
                   <span className="ml-2">Bride & Groom</span>
@@ -76,7 +76,7 @@ export default function Nav() {
               </li>
               <li className="nav-item">
                 <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gold hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-xs uppercase font-light leading-snug text-gold hover:opacity-75 font-openSans"
                   href="#whenandwhere"
                 >
                   <span className="ml-2">When & Where</span>
@@ -84,7 +84,7 @@ export default function Nav() {
               </li>
               <li className="nav-item">
                 <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gold hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-xs uppercase font-light leading-snug text-gold hover:opacity-75 font-openSans"
                   href="#rsvp"
                 >
                   <span className="ml-2">RSVP</span>
@@ -92,7 +92,7 @@ export default function Nav() {
               </li>
               <li className="nav-item">
                 <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gold hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-xs uppercase font-light leading-snug text-gold hover:opacity-75 font-openSans"
                   href="#ourphotos"
                 >
                   <span className="ml-2">Our Photos</span>
