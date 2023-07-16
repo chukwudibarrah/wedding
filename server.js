@@ -1,17 +1,17 @@
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
-const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
+import dotenv from 'dotenv';
+import express from 'express';
+import cors from 'cors';
+import nodemailer from 'nodemailer';
+import bodyParser from 'body-parser';
 
-const app = express();
-const port = process.env.PORT || 3001;
+dotenv.config();
+const server = express();
 
-app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+server.use(cors());
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: true }));
 
-app.use((_req, res, next) => {
+server.use((_req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', '*');
 
@@ -26,7 +26,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.post('/api/sendmail', (req, res) => {
+server.post('/api/sendmail', (req, res) => {
   const { name, email, attendance, guests, message } = req.body;
 
   const mailOptions = {
@@ -48,6 +48,7 @@ app.post('/api/sendmail', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+server.set('port', process.env.PORT || 3001);
+server.listen(server.get('port'), () => {
+  console.log(`Server is running on port ${server.get('port')}`);
 });

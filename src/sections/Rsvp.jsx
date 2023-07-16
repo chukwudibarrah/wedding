@@ -45,6 +45,14 @@ export default function Rsvp() {
     } catch (error) {
       console.error("Error submitting RSVP:", error);
       setErrorModalOpen(true);
+      setButtonLoading(false);
+      setFormData({
+        name: "",
+        email: "",
+        attendance: "",
+        guests: "",
+        message: "",
+      });
     }
   };
 
