@@ -1,6 +1,6 @@
+import dotenv from 'dotenv'
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import dotenv from 'dotenv'
 import couple from "../../images/africancouple.png";
 import { motion } from "framer-motion";
 import Section from "../components/Section";
