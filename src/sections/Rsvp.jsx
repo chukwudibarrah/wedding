@@ -1,15 +1,11 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-// import 'dotenv/config'
-// import dotenv from 'dotenv'
+import dotenv from 'dotenv'
 import couple from "../../images/africancouple.png";
 import { motion } from "framer-motion";
 import Section from "../components/Section";
 import SuccessModal from "../components/SuccessModal";
 import ErrorModal from "../components/ErrorModal";
-import email from "../email.json";
-
-// dotenv.config()
 
 export default function Rsvp() {
   const [successModalOpen, setSuccessModalOpen] = useState(false);
@@ -28,16 +24,16 @@ export default function Rsvp() {
     setErrorModalOpen(false);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonLoading(true);
 
     emailjs
       .sendForm(
-        email.YOUR_SERVICE_ID,
-        email.YOUR_TEMPLATE_ID,
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         form.current,
-        email.YOUR_PUBLIC_KEY
+        import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
         () => {
