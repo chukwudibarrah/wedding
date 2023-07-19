@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import Section from "../components/Section";
 import SuccessModal from "../components/SuccessModal";
 import ErrorModal from "../components/ErrorModal";
-import email from "../../email.json";
+import email from "/email.json";
 
 // dotenv.config()
 
