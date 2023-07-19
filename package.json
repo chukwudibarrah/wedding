@@ -21,6 +21,7 @@
     "leaflet": "^1.9.4",
     "lottie-react": "^2.4.0",
     "mapbox-gl": "^2.15.0",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "node-sass": "^9.0.0",
     "pigeon-maps": "^0.21.3",
     "prop-types": "^15.8.1",
