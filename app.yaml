@@ -1,7 +1,13 @@
 runtime: nodejs20
 
 handlers:
-  - url: /.*
+  - url: /api/.*
     script: auto
-    secure: always
-    redirect_http_response_code: 301
+
+  - url: /(.*\.(ico|gif|jpg|jpeg|png|txt|html|js|css|json|svg|woff2|woff|ttf|map))$
+    static_files: client/dist/\1
+    upload: client/dist/.*\.(ico|gif|jpg|jpeg|png|txt|html|js|css|json|svg|woff2|woff|ttf|map)$
+
+  - url: /.*
+    static_files: client/dist/index.html
+    upload: client/dist/index.html
